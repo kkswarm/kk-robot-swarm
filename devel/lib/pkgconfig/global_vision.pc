@@ -1,8 +1,0 @@
-prefix=/home/loren/kk-robot-swarm/devel
-
-Name: global_vision
-Description: Description of global_vision
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

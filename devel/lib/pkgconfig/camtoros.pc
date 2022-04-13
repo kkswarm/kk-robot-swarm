@@ -1,8 +1,0 @@
-prefix=/home/loren/kk-robot-swarm/devel
-
-Name: camtoros
-Description: Description of camtoros
-Version: 0.0.0
-Cflags: -I/home/loren/kk-robot-swarm/src/camtoros/include
-Libs: -L${prefix}/lib 
-Requires: 

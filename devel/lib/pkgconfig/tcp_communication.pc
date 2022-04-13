@@ -1,8 +1,0 @@
-prefix=/home/loren/kk-robot-swarm/devel
-
-Name: tcp_communication
-Description: Description of tcp_communication
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

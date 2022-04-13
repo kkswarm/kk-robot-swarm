@@ -1,8 +1,0 @@
-prefix=/home/loren/kk-robot-swarm/devel
-
-Name: swarm
-Description: Description of swarm
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
