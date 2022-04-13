@@ -1,8 +1,8 @@
 /*
  * @Author: Chaozheng Zhu && Loren
  * @Date: 2022-04-13 12:20:08
- * @LastEditTime: 2022-04-13 15:50:19
- * @FilePath: /misaro_ws/src/camtoros/src/camtoros.cpp
+ * @LastEditTime: 2022-04-13 19:47:24
+ * @FilePath: /kk-robot-swarm/src/camtoros/src/camtoros.cpp
  * @Description:
  *
  * Copyright (c) 2022 by AmovLab, All Rights Reserved.
@@ -45,21 +45,20 @@ void CamToRos::Publisher(ros::NodeHandle &nh)
     // Load camera info file.
     camera_info_manager::CameraInfoManager camrea_info(
         nh, "hik_camera",
-        "file:///home/loren/misaro_ws/src/camtoros/config/caminfo.yaml");
+        "file:///home/loren/kk-robot-swarm/src/camtoros/config/caminfo.yaml");
     camerainfo_msg_ = camrea_info.getCameraInfo();
     image_msg_.header.stamp = ros::Time::now();
     image_msg_.header.frame_id = "hik_camera";
     camerainfo_msg_.header.stamp = image_msg_.header.stamp;       // sync timestamp.
     camerainfo_msg_.header.frame_id = image_msg_.header.frame_id; // sync frame.
     camera_pub_.publish(image_msg_, camerainfo_msg_);             // publish
-    ros::spinOnce();
+    rate_hz.sleep();
 
     // calculate the image FPS.
     current_time_ = ros::Time::now();
     consumed_time_ = current_time_.toSec() - last_time_.toSec();
-    // std::cout << "Image FPS: " << 1 / consumed_time_ << std::endl;
+    ROS_INFO("Image FPS: %.2f", 1 / consumed_time_);
     last_time_ = current_time_; // repeat time.
-    rate_hz.sleep();
 }
 
 int main(int argc, char **argv)
