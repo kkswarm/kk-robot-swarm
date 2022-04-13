@@ -1,0 +1,6 @@
+[book]
+authors = ["AmovLab"]
+language = "zh-CN"
+multilingual = false
+src = "src"
+title = "Misaro Wiki"

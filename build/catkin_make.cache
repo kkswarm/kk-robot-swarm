@@ -1,0 +1,2 @@
+apriltag_ros/apriltag_ros:camtoros:global_vision:swarm:tcp_communication
+-DCATKIN_DEVEL_PREFIX=/home/loren/kk-robot-swarm/devel -DCMAKE_INSTALL_PREFIX=/home/loren/kk-robot-swarm/install -G Unix Makefiles
