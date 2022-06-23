@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="waypoint_loader" type="waypoint_loader.py" name="waypoint_loader_1" output="screen">
+        <param name="path" value="$(find waypoint_loader)/waypoints/robot_1.csv" />
+        <param name="velocity" value="0.2" />
+        <remap from="/path" to="/robot_1/path" />
+    </node>
+
+     <node pkg="waypoint_loader" type="waypoint_loader.py" name="waypoint_loader_2" output="screen">
+        <param name="path" value="$(find waypoint_loader)/waypoints/robot_2.csv" />
+        <param name="velocity" value="0.2" />
+        <remap from="/path" to="/robot_2/path" />
+    </node>
+
+     <node pkg="waypoint_loader" type="waypoint_loader.py" name="waypoint_loader_3" output="screen">
+        <param name="path" value="$(find waypoint_loader)/waypoints/robot_3.csv" />
+        <param name="velocity" value="0.2" />
+        <remap from="/path" to="/robot_3/path" />
+    </node>
+</launch>

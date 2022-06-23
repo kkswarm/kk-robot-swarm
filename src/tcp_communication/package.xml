@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>tcp_communication</name>
+  <version>0.0.0</version>
+  <description>The tcp_communication package</description>
+
+  <maintainer email="loren@todo.todo">loren</maintainer>
+
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>kkswarm_msgs</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>kkswarm_msgs</build_export_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>kkswarm_msgs</exec_depend>
+
+</package>

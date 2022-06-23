@@ -1,0 +1,30 @@
+<launch> 
+
+  <arg name="name_1" default="robot_1"/>
+  <arg name="name_2" default="robot_2"/>
+  <arg name="name_3" default="robot_3"/>
+  
+  <!-- Pure pursuit path tracking -->
+  <node pkg="pure_pursuit" type="pure_pursuit" name="controller_1" output="screen">
+  <rosparam file="$(find pure_pursuit)/config/$(arg name_1).yaml" command="load"/>
+    <remap from="path_segment" to="$(arg name_1)/path"/>
+    <remap from="odometry" to="$(arg name_1)/pose"/>
+    <remap from="cmd_vel" to="$(arg name_1)/cmd_vel"/>
+  </node>
+  <!-- add more params and nodes-->
+
+  <node pkg="pure_pursuit" type="pure_pursuit" name="controller_2" output="screen">
+   <rosparam file="$(find pure_pursuit)/config/$(arg name_2).yaml" command="load"/>
+      <remap from="path_segment" to="$(arg name_2)/path"/>
+      <remap from="odometry" to="$(arg name_2)/pose"/>
+      <remap from="cmd_vel" to="$(arg name_2)/cmd_vel"/>
+  </node>
+
+  <node pkg="pure_pursuit" type="pure_pursuit" name="controller_3" output="screen">
+    <rosparam file="$(find pure_pursuit)/config/$(arg name_3).yaml" command="load"/>
+      <remap from="path_segment" to="$(arg name_3)/path"/>
+      <remap from="odometry" to="$(arg name_3)/pose"/>
+     <remap from="cmd_vel" to="$(arg name_3)/cmd_vel"/>
+  </node>
+  
+</launch>
