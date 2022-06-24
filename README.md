@@ -7,23 +7,28 @@
 </span>
 
 ## 简介
-KK（Kilo Ken）Swarm， 致敬Kevin Kelly机器社会进化论，一个奉行极简主义的自组织机器人集群，具有丰富的机器人功能，如视觉、控制、学习、协同。同时追求超低成本、超大规模，致力于使群体智慧走进物理世界。
 
-众多低成本机器人互相连接，进而产生他们的信息交流和反馈，相互学习，产生秩序，以达到集体目标，将其称为“群智涌现”。
+### KK目标
+
+开源机器人集群项目`KKSwarm`,由[易科机器人实验室](http://www.exbot.net/)和[阿木实验室](https://www.amovlab.com/)联合匠心打造。
 
 KKSwarm项目旨在为研究人员搭建一个高效、易用的集群研究平台。结合[ROS](https://www.ros.org/)强大的开源生态，让研究人员或者工程师能够快速上手开发。同时也兼顾到理论研究和工程落地之间的跨度，`KKSwarm`项目通过搭建轻量级的仿真环境，再通过参数拟合让仿真和真实环境一致，让仿真环境和真实环境高度匹配，可以实现多智能体等算法的直接过渡，配合上低成本的机器人集群，可以快速在物理环境中验证算法，以达到工程落地的目的。
 
 `KKSwarm`项目通过视觉定位，获取当前机器人的位置和方向。然后根据当前位置和方向，通过算法来控制其下一步的行为。目前`KKSwarm`项目拥有的功能有：
 
-1. 基于强化学习的多车跟随 
-2. 基于强化学习的边界反弹
-3. 基于`MATLAB`搭建仿真环境，该环境可以实现无缝过渡到物理环境
-4. 基于`PURE PURSUIT`路径跟踪算法
-5. 仿真环境中（基于`MATLAB`搭建）支持虚拟雷达、集群路径避障功能
-6. 自主避障蜂拥控制多机器人分布式自主导航
-7. 编队控制
-8. ROS日志分析
-9. 支持ROS2(TODO)
+### KK由来
+KK（Kilo Ken）Swarm，致敬Kevin Kelly机器社会进化论，一个奉行极简主义的自组织机器人集群，具有丰富的机器人功能，如视觉、控制、学习、协同。同时追求超低成本、超大规模，致力于使群 体智慧走进物理世界。众多低成本机器人互相连接，进而产生他们的信息交流和反馈，相互学习，产生 秩序，以达到集体目标，Kevin Kelly将其称为“群智涌现”。
+
+### 项目功能
+`KKSwarm`项目正在成长之中，目前已正式推出的功能有：
+
+1. 独创的全局视觉定位系统，为大规模机器人集群提供低成本、高精度定位服务
+2. 提供基于`MATLAB/simulink`仿真与算法开发环境，以及`KKSwarm simulink`模板，可一键生成ROS代码并部署至`KKSwarm`机器人系统
+3. 提供KKDeep深度强化学习Simulink模板，免去繁琐的环境配置，训练后控制器可一键生成代码部署至机器人集群
+4. 提供ROS rviz在线可视化功能，直观展示集群运行情况
+5. 提供Matlab ROS 日志分析功能，方便采集数据进行分析，提升研发效率
+6. 支持虚拟雷达，低成本实现复杂分布式算法测试。
+
 
 ## 系统说明
 <span style="display: flex; flex-direction: column;">
@@ -45,7 +50,7 @@ KKSwarm项目旨在为研究人员搭建一个高效、易用的集群研究平�
 git clone https://github.com/kkswarm/kk-robot-swarm
 ```
 
-### 海康威视相机Linux SDK
+#### 海康威视相机Linux SDK
 1. 进入[海康威视官网](https://www.hikrobotics.com/cn/machinevision/service/download?module=0)，选择`机器视觉工业相机客户端MVS V2.1.0（Linux）` 进行下载
 
 <blockquote style="background-color:#fff7d0;border-left:.5rem solid #e7c000;color: #4e5969;padding-bottom: 15px;">
@@ -70,17 +75,6 @@ git clone https://github.com/kkswarm/kk-robot-swarm
     cd /opt/MVS/bin
     ./MVS.sh
     ```
-    
-    界面如图1所示：
-
-      <span style="display: flex; flex-direction: column; width:70%">
-         <img src = https://qiniu.md.amovlab.com/img/m/202206/20220609/1529298816925102823079936.png>
-      <p style="text-align: center">
-         图1 相机启动界面
-      </p>
-      </span>
-
-
     相机驱动的动态链接库路径为 `/opt/MVS/lib/64`
 
     相机驱动头文件路径为 `/opt/MVS/include/`
@@ -93,7 +87,7 @@ git clone https://github.com/kkswarm/kk-robot-swarm
    /opt/MVS/lib/64
    sudo ldconfig # 刷新配置
    ```
-### Apritag以及Apritag_ros
+#### Apritag以及Apritag_ros
 
 [apriltag官方简介](https://april.eecs.umich.edu/software/apriltag.html)
 
@@ -101,7 +95,7 @@ git clone https://github.com/kkswarm/kk-robot-swarm
 
 `KKSWARM` 项目采用的标签家族是 `Tag36h11`，尺寸是`7cm`。 详情见 `doc/apritags1-50.pdf`。您也可以通过软件自动生成该家族标签。详情点击[通过openmv生成apriltag标签](https://blog.csdn.net/wangmj_hdu/article/details/112933915)
 
-#### apritag安装
+##### apritag安装
 ```bash
 cd ~/kk-robot-swarm/
 git clone https://github.com/AprilRobotics/apriltag.git
