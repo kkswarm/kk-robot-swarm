@@ -143,7 +143,7 @@ catkin_make
 ### 基于强化学习的多车跟随
 ![](doc/rl.gif)
 
-### 队形变换仿真
+### 队形变换
 ![](doc/formation.gif)
 
 ### 分布式自主导航
