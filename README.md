@@ -123,103 +123,37 @@ catkin_make
 ## 仿真Demo演示(基于Matlab)
 
 ### 单车航点
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220613/1851123501972000954482688.gif>
- <p style="text-align: center">
-    单车航点
- </p>
-</span> -->
-![](https://qiniu.md.amovlab.com/img/m/202206/20220613/1851123501972000954482688.gif)
+![](doc/pp_demo.gif)
 
 
 ### 单车边界回弹
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220618/1145364230038251269685248.gif>
- <p style="text-align: center">
-    单车边界回弹
- </p>
-</span> -->
-![](https://qiniu.md.amovlab.com/img/m/202206/20220618/1145364230038251269685248.gif)
+![](doc/border_demo.gif)
 
 ### 基于强化学习的多车跟随
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220618/1000523680086810391838720.gif>
- <p style="text-align: center">
-    基于强化学习的多车跟随
- </p>
-</span> -->
-![](https://qiniu.md.amovlab.com/img/m/202206/20220618/1000523680086810391838720.gif)
+![](doc/rl_demo.gif)
 
 ### 队形变换仿真
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220616/1206264121207035486175232.gif>
- <p style="text-align: center">
-    队形变换
- </p>
-</span> -->
-![](https://qiniu.md.amovlab.com/img/m/202206/20220616/1206264121207035486175232.gif)
+![](doc/formation_demo.gif)
 
 ### 分布式自主导航
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220615/1757596906286510895431680.gif>
- <p style="text-align: center">
-    分布式自主导航
- </p>
-</span> -->
-![](https://qiniu.md.amovlab.com/img/m/202206/20220615/1757596906286510895431680.gif)
+![](doc/lidar_demo.gif)
 
 ## 真车Demo演示(基于ROS)
 
 ### 单车航点
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1815034282645241422512128.gif>
- <p style="text-align: center">
-    单车航点
- </p>
-</span> -->
-![c1_waypoint.gif](https://qiniu.md.amovlab.com/img/m/202206/20220623/1815034282645241422512128.gif)
+![](doc/c1_waypoint.gif)
 
 ### 单车边界回弹
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1817323657671809328840704.gif>
- <p style="text-align: center">
-    单车边界回弹
- </p>
-</span> -->
-![border.gif](https://qiniu.md.amovlab.com/img/m/202206/20220623/1817323657671809328840704.gif)
+![](doc/border.gif)
 
 ### 基于强化学习的多车跟随
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1817573552851784563261440.gif>
- <p style="text-align: center">
-    基于强化学习的多车跟随
- </p>
-</span> -->
-![rl.gif](https://qiniu.md.amovlab.com/img/m/202206/20220623/1817573552851784563261440.gif)
+![](doc/rl.gif)
 
 ### 队形变换仿真
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1837171313533784963842048.gif>
- <p style="text-align: center">
-    队形变换
- </p>
-</span> -->
-![formation.gif](https://qiniu.md.amovlab.com/img/m/202206/20220623/1837171313533784963842048.gif)
+![](doc/formation.gif)
 
 ### 分布式自主导航
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1838011497545142096003072.gif>
- <p style="text-align: center">
-    分布式自主导航
- </p>
-</span> -->
-![lidar.gif](https://qiniu.md.amovlab.com/img/m/202206/20220623/1838011497545142096003072.gif)
+![](doc/lidar.gif)
 
 ### pure pursuit
-<!-- <span style="display: flex; flex-direction: column; width: 50%">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1838331630588309950332928.gif>
- <p style="text-align: center">
-    纯追踪
- </p>
-</span> -->
-![pp.gif](https://qiniu.md.amovlab.com/img/m/202206/20220623/1838331630588309950332928.gif)
+![](doc/pp.gif)
