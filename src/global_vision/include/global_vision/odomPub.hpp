@@ -1,7 +1,7 @@
 /*
  * @Author: Chaozheng Zhu && Loren
  * @Date: 2022-05-07 09:33:11
- * @LastEditTime: 2022-05-17 17:09:58
+ * @LastEditTime: 2022-06-26 21:01:51
  * @FilePath:
  * /kk-robot-swarm/src/global_vision/include/global_vision/odomPub.hpp
  * @Description:
@@ -81,6 +81,19 @@ class odomPub {
     std::stringstream ss_base;
     std::string end_str_base = "/base_link";
     ss_base << front_str << mark << end_str_base;
+    std::string tf_base = ss_base.str();
+    return tf_base;
+  }
+
+  /**
+   * \brief: Creates /robot_x/base_link tf frame. x is car's id.
+   * \param: {int mark: Car's id.}
+   * \return: {std::string: /robot_x/base_link tf frame}
+   */
+  std::string tagNameGenerate(int mark) {
+    std::string front_str = "/tag_";
+    std::stringstream ss_base;
+    ss_base << front_str << mark;
     std::string tf_base = ss_base.str();
     return tf_base;
   }
