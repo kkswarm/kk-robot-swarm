@@ -1,7 +1,7 @@
 /*
  * @Author: Chaozheng Zhu && Loren
  * @Date: 2022-04-20 14:29:58
- * @LastEditTime: 2022-05-17 16:52:42
+ * @LastEditTime: 2022-06-26 20:59:40
  * @FilePath: /kk-robot-swarm/src/global_vision/src/odomPub.cpp
  * @Description: Combine the car raw datas and the Tf datas, and put odom datas.
  *
@@ -55,12 +55,27 @@ void odomPub::communicationCallBack(
 
 void odomPub::subFromTf() {
   ros::Rate pub_rate(10);
+  static tf::TransformBroadcaster br;
+  tf::Transform transform;
   while (nh_.ok()) {
     try {
       for (int i = 1; i <= car_total_num_; i++) {
         // generate tf fream: /robot_i/base_link
         string tf_base = odomPub::tfNameGenerate(i);
         ROS_INFO("tf_base: %s", tf_base.c_str());
+        // 0 0 0 0 0 0 map robot_5/odom
+        transform.setOrigin(0.0, 0.0, 0.0);
+        tf::Quaternion q;
+        q.setRPY(0, 0, 0);
+        transform.setRotation(q);
+        br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "map", tf_base));
+        // 0 0 0 1 0 0 0 tag_5 robot_5/base_link
+        string tag_base = odomPub::tagNameGenerate(i);
+        ROS_INFO("tag_base: %s", tag_base.c_str());
+        tf::Quaternion q(1, 0, 0, 0);
+        transform.setRotation(q);
+        br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), tag_base, tf_base));
+
 
         car_tf_listener_.waitForTransform("map", tf_base, ros::Time(0),
                                           ros::Duration(10.0));
