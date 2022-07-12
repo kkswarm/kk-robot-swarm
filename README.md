@@ -96,6 +96,12 @@ git clone https://github.com/kkswarm/kk-robot-swarm
 
 `KKSWARM` 项目采用的标签家族是 `Tag36h11`，尺寸是`7cm`。 详情见 `doc/apritags1-50.pdf`。您也可以通过软件自动生成该家族标签。详情点击[通过openmv生成apriltag标签](https://blog.csdn.net/wangmj_hdu/article/details/112933915)
 
+#### apritag依赖安装
+```bash
+sudo apt install python3-pip
+pip3 install numpy
+```
+
 ##### apritag安装
 ```bash
 cd ~/kk-robot-swarm/
