@@ -121,6 +121,13 @@ sudo make install
 cd ~/kk-robot-swarm
 catkin_make
 ```
+
+### 添加环境变量
+```bash
+echo "source ~/kk-robot-swarm/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
 ## 仿真Demo演示(基于Matlab)
 
 ### 单车航点
