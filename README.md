@@ -1,8 +1,15 @@
 # kk-robot-swarm
 <span style="display: flex; flex-direction: column;">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1748557588781156770676736.png>
+    <img src = https://img-blog.csdnimg.cn/img_convert/563efd17c9e67b4b0c5a49d091b6ca16.png>
  <p style="text-align: center">
     KKswarm
+ </p>
+</span>
+
+<span style="display: flex; flex-direction: column;">
+    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1748557588781156770676736.png>
+ <p style="text-align: center">
+    KKswarm logo
  </p>
 </span>
 
