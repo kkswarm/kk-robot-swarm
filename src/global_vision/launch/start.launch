@@ -1,9 +1,14 @@
 <launch>
   <node pkg="global_vision" type="odometryPub" respawn="false" name="odometryPub" output="screen">
+    <param name="car_total_num" value="19" />
+  </node>
+
+  <node pkg="global_vision" type="static_tf" respawn="false" name="static_tf" output="screen">
+    <param name="car_num" value="6" />
   </node>
   <!-- tf publisher -->
   <!-- matrix (1, 0, 0, 0, -1, 0, 0, 0, -1) -->
-  <node pkg="tf" type="static_transform_publisher" name="map_hik_broadcaster" args="0 2 4 1 0 0 0 map hik_camera 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="map_hik_broadcaster" args="0 2 4 1 0 0 0 map hik_camera 100" />
 
   <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_1" args="0 0 0 0 0 0 map robot_1/odom 100" />
   <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_1" args="0 0 0 1 0 0 0 tag_1 robot_1/base_link 100" />
@@ -21,7 +26,7 @@
   <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_5" args="0 0 0 1 0 0 0 tag_5 robot_5/base_link 100" />
 
   <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_6" args="0 0 0 0 0 0 map robot_6/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_6" args="0 0 0 1 0 0 0 tag_6 robot_6/base_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_6" args="0 0 0 1 0 0 0 tag_6 robot_6/base_link 100" /> -->
 
   <!-- <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_7" args="0 0 0 0 0 0 map robot_7/odom 100" />
   <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_7" args="0 0 0 1 0 0 0 tag_7 robot_7/base_link 100" />

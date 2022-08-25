@@ -26,6 +26,12 @@ odomPub::odomPub() {
   boost::thread tfThread(&odomPub::subFromTf, this);
   tfThread.detach();
 
+  ros::NodeHandle nh_private("~");
+  // parameter
+  nh_private.param("car_total_num", car_total_num_, 6);
+
+  cout << "num: " << car_total_num_ << endl;
+
   for (int i = 1; i <= car_total_num_; i++) {
     string topic = odomPub::topicNameGenerate(i);
     ros::Publisher pub = nh_.advertise<nav_msgs::Odometry>(topic, 10);
@@ -59,7 +65,7 @@ void odomPub::subFromTf() {
     try {
       for (int i = 1; i <= car_total_num_; i++) {
         // generate tf fream: /robot_i/base_link
-        string tf_base = odomPub::tfNameGenerate(i);
+        string tf_base = odomPub::baseLinkTfNameGenerate(i);
         ROS_INFO("tf_base: %s", tf_base.c_str());
 
         car_tf_listener_.waitForTransform("map", tf_base, ros::Time(0),
@@ -86,6 +92,7 @@ void odomPub::subFromTf() {
 
         // odom msgs.
         car_odom_[i].header.stamp = ros::Time::now();
+        // car_odom_[i].header.stamp = current_time_;
         car_odom_[i].header.frame_id = "map";
         car_odom_[i].child_frame_id = tf_base;
         car_odom_[i].pose.pose.position.x = car_pose_[i].car_center_point[0];

@@ -62,3 +62,7 @@ target_link_libraries(odometryPub
 
 add_executable(stop src/stop.cpp)
 target_link_libraries(stop ${catkin_LIBRARIES})
+
+
+add_executable(static_tf src/static_tf.cpp)
+target_link_libraries(static_tf ${catkin_LIBRARIES})
