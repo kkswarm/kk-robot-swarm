@@ -1,8 +1,15 @@
 # kk-robot-swarm
 <span style="display: flex; flex-direction: column;">
-    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1748557588781156770676736.png>
+    <img src = https://img-blog.csdnimg.cn/img_convert/563efd17c9e67b4b0c5a49d091b6ca16.png>
  <p style="text-align: center">
     KKswarm
+ </p>
+</span>
+
+<span style="display: flex; flex-direction: column;">
+    <img src = https://qiniu.md.amovlab.com/img/m/202206/20220623/1748557588781156770676736.png>
+ <p style="text-align: center">
+    KKswarm logo
  </p>
 </span>
 
@@ -14,10 +21,10 @@
 
 KKSwarm项目旨在为研究人员搭建一个高效、易用的集群研究平台。结合[ROS](https://www.ros.org/)强大的开源生态，让研究人员或者工程师能够快速上手开发。同时也兼顾到理论研究和工程落地之间的跨度，`KKSwarm`项目通过搭建轻量级的仿真环境，再通过参数拟合让仿真和真实环境一致，让仿真环境和真实环境高度匹配，可以实现多智能体等算法的直接过渡，配合上低成本的机器人集群，可以快速在物理环境中验证算法，以达到工程落地的目的。
 
-`KKSwarm`项目通过视觉定位，获取当前机器人的位置和方向。然后根据当前位置和方向，通过算法来控制其下一步的行为。目前`KKSwarm`项目拥有的功能有：
+`KKSwarm`项目通过视觉定位，获取当前机器人的位置和方向。然后根据当前位置和方向，通过算法来控制其下一步的行为。
 
 ### KK由来
-KK（Kilo Ken）Swarm，致敬Kevin Kelly机器社会进化论，一个奉行极简主义的自组织机器人集群，具有丰富的机器人功能，如视觉、控制、学习、协同。同时追求超低成本、超大规模，致力于使群 体智慧走进物理世界。众多低成本机器人互相连接，进而产生他们的信息交流和反馈，相互学习，产生 秩序，以达到集体目标，Kevin Kelly将其称为“群智涌现”。
+KKSwarm，致敬Kevin Kelly机器社会进化论，一个奉行极简主义的自组织机器人集群，具有丰富的机器人功能，如视觉、控制、学习、协同。同时追求超低成本、超大规模，致力于使群 体智慧走进物理世界。众多低成本机器人互相连接，进而产生他们的信息交流和反馈，相互学习，产生 秩序，以达到集体目标，Kevin Kelly将其称为“群智涌现”。
 
 ### 项目功能
 `KKSwarm`项目正在成长之中，目前已正式推出的功能有：
@@ -114,7 +121,7 @@ sudo make install
 ```
 1. Apriltag相关头文件将会被安装在 `/usr/local/include/apriltag`
 2. Apriltag相关的库将会被安装在 `/usr/local/lib/`
-3. 有关Aprilt
+3. 有关Apriltag，可以访问其 [Github主页](https://github.com/AprilRobotics/apriltag)获取更多信息
 
 ### 编译
 ```bash
