@@ -35,10 +35,10 @@ class odomPub {
   ros::Subscriber communication_sub_;
 
   // car_odom_[1] means No.1 car's odom data.
-  nav_msgs::Odometry car_odom_[11];
+  nav_msgs::Odometry car_odom_[21];
 
   // car_pose_[1] means No.1 car's pose data.
-  kkswarm_msgs::kkSwarmPose car_pose_[11];
+  kkswarm_msgs::kkSwarmPose car_pose_[21];
 
   tf::TransformListener car_tf_listener_;
   tf::StampedTransform transform_;

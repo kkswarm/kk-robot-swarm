@@ -65,4 +65,13 @@ target_link_libraries(stop ${catkin_LIBRARIES})
 
 
 add_executable(static_tf src/static_tf.cpp)
-target_link_libraries(static_tf ${catkin_LIBRARIES})
+add_dependencies(static_tf
+                 ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+                 ${catkin_EXPORTED_TARGETS}
+)
+
+target_link_libraries(static_tf 
+                      ${OpenCV_LIBS} 
+                      ${catkin_LIBS} 
+                      ${catkin_LIBRARIES}
+)

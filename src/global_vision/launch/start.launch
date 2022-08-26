@@ -1,42 +1,12 @@
 <launch>
   <node pkg="global_vision" type="odometryPub" respawn="false" name="odometryPub" output="screen">
-    <param name="car_total_num" value="19" />
+    <param name="car_total_num" value="20" />
   </node>
 
   <node pkg="global_vision" type="static_tf" respawn="false" name="static_tf" output="screen">
-    <param name="car_num" value="6" />
+    <param name="car_num" value="20" />
   </node>
   <!-- tf publisher -->
   <!-- matrix (1, 0, 0, 0, -1, 0, 0, 0, -1) -->
-  <!-- <node pkg="tf" type="static_transform_publisher" name="map_hik_broadcaster" args="0 2 4 1 0 0 0 map hik_camera 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_1" args="0 0 0 0 0 0 map robot_1/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_1" args="0 0 0 1 0 0 0 tag_1 robot_1/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_2" args="0 0 0 0 0 0 map robot_2/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_2" args="0 0 0 1 0 0 0 tag_2 robot_2/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_3" args="0 0 0 0 0 0 map robot_3/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_3" args="0 0 0 1 0 0 0 tag_3 robot_3/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_4" args="0 0 0 0 0 0 map robot_4/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_4" args="0 0 0 1 0 0 0 tag_4 robot_4/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_5" args="0 0 0 0 0 0 map robot_5/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_5" args="0 0 0 1 0 0 0 tag_5 robot_5/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_6" args="0 0 0 0 0 0 map robot_6/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_6" args="0 0 0 1 0 0 0 tag_6 robot_6/base_link 100" /> -->
-
-  <!-- <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_7" args="0 0 0 0 0 0 map robot_7/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_7" args="0 0 0 1 0 0 0 tag_7 robot_7/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_8" args="0 0 0 0 0 0 map robot_8/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_8" args="0 0 0 1 0 0 0 tag_8 robot_8/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_9" args="0 0 0 0 0 0 map robot_9/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_9" args="0 0 0 1 0 0 0 tag_9 robot_9/base_link 100" />
-
-  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster_10" args="0 0 0 0 0 0 map robot_10/odom 100" />
-  <node pkg="tf" type="static_transform_publisher" name="tag_base_broadcaster_10" args="0 0 0 1 0 0 0 tag_10 robot_10/base_link 100" /> -->
+  <node pkg="tf" type="static_transform_publisher" name="map_hik_broadcaster" args="0 2 4 1 0 0 0 map hik_camera 100" />
 </launch>

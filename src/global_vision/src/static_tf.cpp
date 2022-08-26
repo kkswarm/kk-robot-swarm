@@ -28,7 +28,7 @@ odomPub::odomPub() {
 
   // ros::Rate pubRate(10);
 
-  for (int i = 0; i < car_num; i++) {
+  for (int i = 0; i <= car_num; i++) {
     string tf_odom = odomTfNameGenerate(i);
     map2odom_transformStamped.header.stamp = ros::Time::now();
     map2odom_transformStamped.header.frame_id = "map";
@@ -47,8 +47,8 @@ odomPub::odomPub() {
     string tf_tag = tagTfNameGenerate(i);
     string tf_base = baseLinkTfNameGenerate(i);
     tag2base_link_transformStamped.header.stamp = ros::Time::now();
-    tag2base_link_transformStamped.header.frame_id = tf_base;
-    tag2base_link_transformStamped.child_frame_id = tf_tag;
+    tag2base_link_transformStamped.header.frame_id = tf_tag;
+    tag2base_link_transformStamped.child_frame_id = tf_base;
     tag2base_link_transformStamped.transform.translation.x = 0;
     tag2base_link_transformStamped.transform.translation.y = 0;
     tag2base_link_transformStamped.transform.translation.z = 0;
