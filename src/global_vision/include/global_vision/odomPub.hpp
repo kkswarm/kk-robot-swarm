@@ -44,7 +44,9 @@ class odomPub {
   tf::StampedTransform transform_;
   tf::Quaternion quat_;
 
-  int car_total_num_ = 6;
+  ros::Time current_time_;
+
+  int car_total_num_;
   odomPub();
   ~odomPub() = default;
 
@@ -76,10 +78,37 @@ class odomPub {
    * \param: {int mark: Car's id.}
    * \return: {std::string: /robot_x/base_link tf frame}
    */
-  std::string tfNameGenerate(int mark) {
+  std::string baseLinkTfNameGenerate(int mark) {
     std::string front_str = "/robot_";
     std::stringstream ss_base;
     std::string end_str_base = "/base_link";
+    ss_base << front_str << mark << end_str_base;
+    std::string tf_base = ss_base.str();
+    return tf_base;
+  }
+
+  /**
+   * \brief: Creates /tag_x tf frame. x is car's id.
+   * \param: {int mark: Car's id.}
+   * \return: {std::string: /tag_x tf frame}
+   */
+  std::string tagTfNameGenerate(int mark) {
+    std::string front_str = "/tag_";
+    std::stringstream ss_base;
+    ss_base << front_str << mark;
+    std::string tf_base = ss_base.str();
+    return tf_base;
+  }
+
+  /**
+   * \brief: Creates /robot_x/odom tf frame. x is car's id.
+   * \param: {int mark: Car's id.}
+   * \return: {std::string: /robot_x/odom tf frame}
+   */
+  std::string odomTfNameGenerate(int mark) {
+    std::string front_str = "/robot_";
+    std::stringstream ss_base;
+    std::string end_str_base = "/odom";
     ss_base << front_str << mark << end_str_base;
     std::string tf_base = ss_base.str();
     return tf_base;
